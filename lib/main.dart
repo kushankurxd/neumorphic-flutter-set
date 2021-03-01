@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:instagramtutorialpart2/components/card.dart';
+import 'package:instagramtutorialpart2/components/edittexttapped.dart';
 import 'package:instagramtutorialpart2/components/iconbutton.dart';
 import 'package:instagramtutorialpart2/components/iconbuttontapped.dart';
 import 'package:instagramtutorialpart2/components/search.dart';
@@ -227,6 +228,10 @@ class _MyHomePageState extends State<MyHomePage> {
                     });
                   },
                 ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: Edittexttapped(),
               )
             ],
           ),

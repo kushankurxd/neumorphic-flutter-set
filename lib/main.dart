@@ -101,119 +101,122 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[200],
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: CardXD(
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 24),
+              Padding(
+                  padding: EdgeInsets.all(20),
+                  child: GestureDetector(
+                    onTap: _letsPress5,
+                    child: onSearchPressed ? SearchTapped() : SearchXD(),
+                  )),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: CardXD(
+                  child: Row(
+                    children: [
+                      Image.asset('images/user4.png', width: 100, height: 100),
+                      SizedBox(width: 10),
+                      Flexible(
+                        child: Text(
+                            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                                fontSize: 13, color: Colors.grey[700])),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Image.asset('images/user4.png', width: 100, height: 100),
-                    SizedBox(width: 10),
-                    Flexible(
-                      child: Text(
-                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
-                          textAlign: TextAlign.justify,
-                          style:
-                              TextStyle(fontSize: 13, color: Colors.grey[700])),
-                    )
+                    GestureDetector(
+                      onTap: _letsPress6,
+                      child: onLabelTapped
+                          ? IconButtonTapped(
+                              icon: Icons.location_on,
+                              text: 'Label',
+                            )
+                          : IconButtonXD(
+                              icon: Icons.location_on,
+                              text: 'Label',
+                            ),
+                    ),
+                    GestureDetector(
+                      onTap: _letsPress7,
+                      child: onshareTapped
+                          ? IconButtonTapped(icon: Icons.share, text: 'Share')
+                          : IconButtonXD(
+                              icon: Icons.share,
+                              text: 'Share',
+                            ),
+                    ),
                   ],
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                    onTap: _letsPress6,
-                    child: onLabelTapped
-                        ? IconButtonTapped(
-                            icon: Icons.location_on,
-                            text: 'Label',
-                          )
-                        : IconButtonXD(
-                            icon: Icons.location_on,
-                            text: 'Label',
-                          ),
-                  ),
-                  GestureDetector(
-                    onTap: _letsPress7,
-                    child: onshareTapped
-                        ? IconButtonTapped(icon: Icons.share, text: 'Share')
-                        : IconButtonXD(
-                            icon: Icons.share,
-                            text: 'Share',
-                          ),
-                  ),
-                ],
-              ),
-            ),
-            Padding(
+              Padding(
                 padding: EdgeInsets.all(20),
-                child: GestureDetector(
-                  onTap: _letsPress5,
-                  child: onSearchPressed ? SearchTapped() : SearchXD(),
-                )),
-            Padding(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                        // FIRST BUTTON
-                        onTap: _letsPress1,
-                        child: buttonPressed1
-                            ? ButtonTapped(
-                                icon: icons1,
-                              )
-                            : MyButton(
-                                icon: icons1,
-                              )),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                        // SECOND BUTTON
-                        onTap: _letsPress2,
-                        child: buttonPressed2
-                            ? ButtonTapped(
-                                icon: icons2,
-                              )
-                            : MyButton(
-                                icon: icons2,
-                              )),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                        // THIRD BUTTON
-                        onTap: _letsPress3,
-                        child: buttonPressed3
-                            ? ButtonTapped(
-                                icon: icons3,
-                              )
-                            : MyButton(
-                                icon: icons3,
-                              )),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                        // FOURTH BUTTON
-                        onTap: _letsPress4,
-                        child: buttonPressed4
-                            ? ButtonTapped(
-                                icon: icons4,
-                              )
-                            : MyButton(
-                                icon: icons4,
-                              )),
-                  ),
-                ],
-              ),
-            )
-          ],
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: GestureDetector(
+                          // FIRST BUTTON
+                          onTap: _letsPress1,
+                          child: buttonPressed1
+                              ? ButtonTapped(
+                                  icon: icons1,
+                                )
+                              : MyButton(
+                                  icon: icons1,
+                                )),
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                          // SECOND BUTTON
+                          onTap: _letsPress2,
+                          child: buttonPressed2
+                              ? ButtonTapped(
+                                  icon: icons2,
+                                )
+                              : MyButton(
+                                  icon: icons2,
+                                )),
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                          // THIRD BUTTON
+                          onTap: _letsPress3,
+                          child: buttonPressed3
+                              ? ButtonTapped(
+                                  icon: icons3,
+                                )
+                              : MyButton(
+                                  icon: icons3,
+                                )),
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                          // FOURTH BUTTON
+                          onTap: _letsPress4,
+                          child: buttonPressed4
+                              ? ButtonTapped(
+                                  icon: icons4,
+                                )
+                              : MyButton(
+                                  icon: icons4,
+                                )),
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

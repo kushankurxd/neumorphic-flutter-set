@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramtutorialpart2/components/card.dart';
 import 'package:instagramtutorialpart2/components/iconbutton.dart';
 import 'package:instagramtutorialpart2/components/iconbuttontapped.dart';
 import 'package:instagramtutorialpart2/components/search.dart';
@@ -104,6 +105,24 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: CardXD(
+                child: Row(
+                  children: [
+                    Image.asset('images/user4.png', width: 100, height: 100),
+                    SizedBox(width: 10),
+                    Flexible(
+                      child: Text(
+                          'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ',
+                          textAlign: TextAlign.justify,
+                          style:
+                              TextStyle(fontSize: 13, color: Colors.grey[700])),
+                    )
+                  ],
+                ),
+              ),
+            ),
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(

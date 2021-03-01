@@ -17,7 +17,7 @@ class SearchXD extends StatelessWidget {
           children: [
             Icon(
               Icons.search,
-              size: 24,
+              size: 27,
               color: Colors.grey[800],
             ),
             SizedBox(width: 10),
@@ -25,7 +25,7 @@ class SearchXD extends StatelessWidget {
               'Search for ...',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 16,
+                fontSize: 18,
               ),
             )
           ],

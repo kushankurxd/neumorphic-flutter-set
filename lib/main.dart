@@ -4,6 +4,7 @@ import 'package:instagramtutorialpart2/components/iconbutton.dart';
 import 'package:instagramtutorialpart2/components/iconbuttontapped.dart';
 import 'package:instagramtutorialpart2/components/search.dart';
 import 'package:instagramtutorialpart2/components/searchtapped.dart';
+import 'package:instagramtutorialpart2/components/switch.dart';
 import 'components/button.dart';
 import 'components/buttontapped.dart';
 
@@ -42,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool onSearchPressed = false;
   bool onLabelTapped = false;
   bool onshareTapped = false;
+  bool _enable = false;
 
   void _letsPress1() {
     setState(() {
@@ -213,6 +215,17 @@ class _MyHomePageState extends State<MyHomePage> {
                                 )),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(20),
+                child: CustomSwitch(
+                  value: _enable,
+                  onChanged: (bool val) {
+                    setState(() {
+                      _enable = val;
+                    });
+                  },
                 ),
               )
             ],

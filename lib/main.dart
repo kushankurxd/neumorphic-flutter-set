@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:instagramtutorialpart2/components/iconbutton.dart';
+import 'package:instagramtutorialpart2/components/iconbuttontapped.dart';
 import 'package:instagramtutorialpart2/components/search.dart';
 import 'package:instagramtutorialpart2/components/searchtapped.dart';
 import 'components/button.dart';
@@ -37,6 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
   bool buttonPressed3 = false;
   bool buttonPressed4 = false;
   bool onSearchPressed = false;
+  bool onLabelTapped = false;
+  bool onshareTapped = false;
 
   void _letsPress1() {
     setState(() {
@@ -80,6 +84,18 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _letsPress6() {
+    setState(() {
+      onLabelTapped = !onLabelTapped;
+    });
+  }
+
+  void _letsPress7() {
+    setState(() {
+      onshareTapped = !onshareTapped;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,6 +104,35 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  GestureDetector(
+                    onTap: _letsPress6,
+                    child: onLabelTapped
+                        ? IconButtonTapped(
+                            icon: Icons.location_on,
+                            text: 'Label',
+                          )
+                        : IconButtonXD(
+                            icon: Icons.location_on,
+                            text: 'Label',
+                          ),
+                  ),
+                  GestureDetector(
+                    onTap: _letsPress7,
+                    child: onshareTapped
+                        ? IconButtonTapped(icon: Icons.share, text: 'Share')
+                        : IconButtonXD(
+                            icon: Icons.share,
+                            text: 'Share',
+                          ),
+                  ),
+                ],
+              ),
+            ),
             Padding(
                 padding: EdgeInsets.all(20),
                 child: GestureDetector(

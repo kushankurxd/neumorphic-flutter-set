@@ -14,9 +14,9 @@ class IconButtonTapped extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(4),
       child: Container(
-        padding: EdgeInsets.all(5),
+        padding: EdgeInsets.all(2),
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 28, vertical: 12),
+          padding: EdgeInsets.symmetric(horizontal: 29, vertical: 13),
           child: Row(
             children: [
               Icon(

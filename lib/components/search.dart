@@ -8,16 +8,16 @@ class SearchXD extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(4),
+      padding: EdgeInsets.all(5),
       child: Container(
         width: double.infinity,
-        padding: EdgeInsets.all(20),
+        padding: EdgeInsets.all(16),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Icon(
               Icons.search,
-              size: 27,
+              size: 24,
               color: Colors.grey[800],
             ),
             SizedBox(width: 10),
@@ -25,7 +25,7 @@ class SearchXD extends StatelessWidget {
               'Search for ...',
               style: TextStyle(
                 fontWeight: FontWeight.w400,
-                fontSize: 18,
+                fontSize: 16,
               ),
             )
           ],

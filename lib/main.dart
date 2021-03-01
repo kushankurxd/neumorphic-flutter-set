@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'button.dart';
-import 'buttontapped.dart';
+import 'package:instagramtutorialpart2/components/search.dart';
+import 'package:instagramtutorialpart2/components/searchtapped.dart';
+import 'components/button.dart';
+import 'components/buttontapped.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +23,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   // SET ICONS HERE
 
   var icons1 = Icons.home;
@@ -35,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool buttonPressed2 = false;
   bool buttonPressed3 = false;
   bool buttonPressed4 = false;
+  bool onSearchPressed = false;
 
   void _letsPress1() {
     setState(() {
@@ -72,6 +74,12 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _letsPress5() {
+    setState(() {
+      onSearchPressed = !onSearchPressed;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,6 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
+            Padding(
+                padding: EdgeInsets.all(20),
+                child: GestureDetector(
+                  onTap: _letsPress5,
+                  child: onSearchPressed ? SearchTapped() : SearchXD(),
+                )),
             Padding(
               padding: EdgeInsets.all(20),
               child: Row(

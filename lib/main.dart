@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Center(
           child: Column(
             children: <Widget>[
-              SizedBox(height: 24),
+              SizedBox(height: 64),
               Padding(
                   padding: EdgeInsets.all(20),
                   child: GestureDetector(
